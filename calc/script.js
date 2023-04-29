@@ -2,7 +2,7 @@ function cal(){
     var curSlot = Number(document.getElementById("curSlot").value);
     var curRub = Number(document.getElementById("curRub").value);
     var finSlot = Number(document.getElementById("finSlot").value);
-    var upCost = 10000;
+    var upCost = (curSlot - 32) * 1000;
     var honor = 0;
     var day = 0;
     var guildBuilding = 1;
