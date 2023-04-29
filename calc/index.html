@@ -5,19 +5,42 @@
         <title>자분닷컴 | 계산기</title>
     </head>
     <body>
-        <h3>일교 우체통 확장 계산기</h3>
-        길드 건물 풀강 (동상) :
-        <input type="checkbox" id="guildBuilding"><br>
+        <h3>엽서교환 우체통 확장 계산기</h3>
+        유명세 버프 :        
+        <input type="checkbox" id="famous" checked><br>
+        길드 등급 :
+        <select id="guild">
+            <option value="wood">우드 레벨 (1%)</option>
+            <option value="bronze">브론즈 레벨 (2%)</option>
+            <option value="silver">실버 레벨 (3%)</option>
+            <option value="gold">골드 레벨 (4%)</option>
+            <option value="platinum" selected>플래티넘 레벨 (5%)</option>
+            <option value="master" >마스터 레벨 (6%)</option>
+        </select><br>
+        길드 건물 등급 (동상) :
+        <select id="statue">
+            <option value="t1">1단계 (2.5%)</option>
+            <option value="t2">2단계 (5%)</option>
+            <option value="t3">3단계 (7.5%)</option>
+            <option value="t4">4단계 (10%)</option>
+            <option value="t5">5단계 (12.5%)</option>
+            <option value="t6" selected>6단계 (15%)</option>
+        </select><br>
         현재 우체통 :
-        <input type="text" id="curSlot"><br>
+        <input type="text" id="curSlot" value=42><br>
         현재 루블 :
         <input type="text" id="curRub"><br>
         목표 우체통 :
-        <input type="text" id="finSlot"><br>
+        <input type="text" id="finSlot" value = 1002><br><br>
         소요 기간 :
         <input type="text" id="day"><br><br>
         <input type="button" value="계산하기" onclick="cal()">
-        <input type="button" value="초기화" onclick="reset()">        
+        <input type="button" value="초기화" onclick="reset()">
+        <br><br>
+        <details>
+            <summary>우체통 로그 펼처보기</summary>
+            <textarea rows="20" cols="80" id="log" readonly></textarea>
+        </details>
         <script type="text/javascript" src="script.js"></script>
     </body>
 </html>
